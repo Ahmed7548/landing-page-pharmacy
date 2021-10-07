@@ -1,0 +1,521 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+}
+
+.container{
+  position: relative;
+}
+
+body {
+  font-family: "Hind Siliguri";
+  font-weight: 300;
+  overflow-x: hidden;
+  margin: 0;
+  background-color: rgba(0, 128, 128, 0.411);
+}
+h1,
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+/* header styling */
+header {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 50px;
+  color: rgb(223, 217, 217);
+  background-color: rgb(1, 38, 61);
+}
+
+header .nav-list {
+  position: relative;
+  display: flex;
+  height: 100%;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+  height: 3em;
+  list-style: none;
+}
+header .logo {
+  display: inline-block;
+  position: absolute;
+  right: 30px;
+  top: 4px;
+}
+
+header .fa-prescription {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  font-size: 40px;
+}
+header .list-expand {
+  position: absolute;
+  z-index: 100;
+  top: 5px;
+  left: 10px;
+  visibility: hidden;
+}
+
+header .fa-bars {
+  font-size: 30px;
+  padding: 5px;
+  background-color: rgb(2, 31, 59);
+  cursor: pointer;
+}
+
+header .list-container {
+  display: inline-block;
+}
+header .nav-list .list-item {
+  width: 200px;
+  flex-basis: 100px;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.list-item:active {
+  transform: scale(0.97);
+}
+
+header .nav-list .list-item::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(235, 241, 243);
+  transform: translateY(12px);
+  height: 2px;
+  width: 0;
+}
+.list-item:hover.list-item::after {
+  width: 60px;
+  transition: width 0.4s ease-in;
+}
+
+/* section home styling */
+section {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+section#home {
+  margin-top: 50px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 3vw));
+  margin-bottom: -40px;
+  z-index: 1;
+}
+
+section #home-img {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#Pharmacy-name-container {
+  position: absolute;
+  z-index: 2;
+  width: 70%;
+  height: 100vh;
+  border-top-right-radius: 0%;
+  border-bottom-right-radius: 70%;
+  background-color: rgba(0, 128, 128, 0.39);
+  left: 0;
+  top: -60px;
+  padding: 20px;
+  color: white;
+}
+h1#Pharmacy-name {
+  text-align: start;
+  color: rgb(250, 252, 252);
+  background-color: rgb(27, 39, 39);
+  padding: 30px;
+  min-width: 50%;
+  max-width: fit-content;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 60px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+}
+
+#Pharmacy-name-container h2 {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  color: rgb(247, 252, 252);
+  background-color: rgb(27, 39, 39);
+  margin-left: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  min-width: 30%;
+  max-width: fit-content;
+  display: block;
+}
+
+section.active h1#Pharmacy-name {
+  transition: all 0.4s ease-in-out;
+}
+#moto {
+  text-align: center;
+  display: inline-block;
+  color: white;
+  font-weight: 500;
+  max-width: 550px;
+  border-radius: 10px;
+}
+section.active #moto {
+  font-size: 1em;
+  transition: all 0.4s ease-in-out;
+}
+section #home-img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(1, 1, 32, 0.377);
+}
+section.active #home-img::after {
+  opacity: 0.2;
+  transition: opacity 0.5s linear;
+}
+
+/* ____about section____ */
+section#about {
+  position: relative;
+  margin: 0;
+  background-image: url("../nathaniel-yeo-747NDboAWNY-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0% 100%);
+}
+
+.about-container {
+  margin: 10vh;
+  padding-left: 15vw;
+  background-color: rgba(0, 0, 0, 0.562);
+  max-width: 70vw;
+  min-width: fit-content;
+  height: fit-content;
+  border: 1px solid rgba(169, 169, 169, 0.692);
+  color: rgb(214, 214, 209);
+  transform: skew(10deg) translateX(-150vw);
+  display: inline-block;
+  transition: transform 0.8s ease-in-out;
+  position: absolute;
+  z-index: 1;
+}
+
+section#about::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 128, 128, 0.322);
+}
+.about-container h2 {
+  text-align: center;
+}
+.about-container p {
+  letter-spacing: 2px;
+  word-spacing: 4px;
+  display: flex;
+}
+section.active .about-container {
+  transform: skew(10deg) translateX(-15vw);
+}
+
+/* __staff section__ */
+
+.staff-container {
+  width: 90vw;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.staff {
+  background-color: teal;
+  color: white;
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  flex-basis: 20%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.staff img {
+  width: 100%;
+}
+
+.staff h3 {
+  margin: 10px;
+}
+
+.staff p {
+  text-align: center;
+  padding: 6px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.staff:hover {
+  transform: scale(1.1);
+}
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section .form-container {
+  height: fit-content;
+  background-color: teal;
+  width: 70vw;
+  margin: 0 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(90deg);
+  transition: transform 0.8s ease-in-out;
+}
+section.active .form-container {
+  transform: rotateY(0deg);
+}
+
+section .form-container form {
+  height: 100%;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: stretch;
+  color: azure;
+}
+
+section .form-container form .form-group {
+  width: fit-content;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+section .form-container form .name {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-group input,
+.form-group textarea {
+  border: 0;
+  border-radius: 5px;
+  outline: 0;
+  background-color: rgb(110 164 177);
+  color: ivory;
+  padding: 5px;
+  font-family: inherit;
+  font-size: 17px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+  width: 250px;
+  height: 35px;
+}
+
+.form-group input[type="email"] {
+  width: 400px;
+}
+.form-group textarea {
+  height: 100px;
+  width: 85%;
+}
+.form-group label {
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+button {
+  height: 35px;
+  width: 100px;
+  margin: 30px auto 0;
+  padding: 5px;
+  border: 0;
+  border-radius: 5px;
+  outline: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 18px;
+  text-transform: uppercase;
+  background-color: rgba(88, 172, 5, 0.63);
+  color: azure;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* __footer__ */
+
+footer {
+  height: 200px;
+  background-color: rgb(0, 0, 0);
+  position: relative;
+  color: rgb(245, 250, 250);
+}
+
+footer ul {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+}
+footer ul li {
+  list-style: none;
+}
+
+footer .copy {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: rgb(245, 250, 250);
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.4s ease;
+}
+footer ul li a i {
+  display: inline-block;
+  padding-right: 10px;
+}
+footer ul li a:hover {
+  color: rgb(3, 141, 151);
+}
+
+@media (max-width: 800px) {
+  header .list-expand {
+    visibility: visible;
+  }
+  header .nav-list {
+    position: fixed;
+    z-index: 1000;
+    top: 50px;
+    
+    width: 0;
+    margin: 0;
+    flex-direction: column;
+    height: fit-content;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  header .nav-list .list-item {
+    position: relative;
+    transform: translateX(-200px);
+    border-radius: 10px;
+    padding: 3px;
+    margin: 0.5px;
+    width: 120px;
+    border: 2px outset rgb(121, 117, 138);
+    flex-basis: 20px;
+    background-color: rgb(1, 38, 61);
+    justify-content: flex-start;
+    transition-property: border, transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+  }
+
+  header.active .nav-list {
+    width: fit-content;
+    transition: width 0.5s ease-in-out;
+  }
+  header.active .nav-list .list-item {
+    transform: translateX(0);
+  }
+
+  h1#Pharmacy-name {
+    font-size: 18pt;
+  }
+  #moto {
+    font-size: 12pt;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  section#about {
+    background-image: url("../pina-messina-kfJkpeI6Lgc-unsplash.jpg");
+    height: fit-content;
+  }
+  section#about::before {
+    background-color: rgba(0, 128, 128, 0.466);
+  }
+  .about-container {
+    padding: 40px 0;
+    margin: auto;
+    height: 100%;
+    width: 100vw;
+    border: 0 solid darkgray;
+    box-shadow: 0px 0px 0px rgb(252, 248, 248);
+    transform: skew(0) translateX(0);
+    transition: transform 0.5s ease-in-out;
+
+    position: static;
+  }
+  section.active .about-container {
+    transform: skew(0) translateX(0);
+  }
+
+  .about-container .about-content {
+    padding: 20px;
+    height: fit-content;
+  }
+  #staff {
+    height: fit-content;
+  }
+  .staff-container {
+    display: block;
+    width: 80vw;
+    margin: 20px auto;
+    height: fit-content;
+  }
+
+  .staff {
+    margin: 60px auto;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="email"] {
+    width: 40vw;
+    height: calc(40px - calc(100vw / 70));
+  }
+
+  .form-group input[type="email"] {
+    width: 55vw;
+  }
+}
